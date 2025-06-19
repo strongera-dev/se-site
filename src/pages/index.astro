@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
+import mainPageImage from 'images/strongera.png';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -16,7 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<main>
 			<h2>Welcome to your StrongEra</h2>
 			<p>
-				<Image src="/images/strongera.png" alt="StrongEra Studio image of woman lifting weights" style='width: 500; object-fit: contain'/>
+				<Image src={mainPageImage} alt="StrongEra Studio image of woman lifting weights" style='width: 500; object-fit: contain'/>
 			</p>
 		</main>
 		<Footer />
