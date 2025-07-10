@@ -1,1 +1,25 @@
-f
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import mainPageImage from '../images/IMG_2232.JPG';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Welcome to your StrongEra</h2>
+			<p>
+				<Image src={mainPageImage} alt="StrongEra Studio image of woman lifting weights" style='width: 500; object-fit: contain'/>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
